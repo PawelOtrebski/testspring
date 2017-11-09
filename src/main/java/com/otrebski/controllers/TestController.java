@@ -10,7 +10,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class TestController{
 	
 	@RequestMapping(method=RequestMethod.GET)
-	public String test() {
-		return "test!";
+	public String testGet() {
+		return "successful get";
+	}
+	
+	@RequestMapping(method=RequestMethod.PUT)
+	public String testTwoPut() {
+		return "successful put";
+	}
+	
+	@RequestMapping(method=RequestMethod.POST)
+	public String testPost() {
+		return "successful post";
+	}
+	
+	@RequestMapping(method=RequestMethod.DELETE)
+	public String testDelete() {
+		return "successful delete";
 	}
 }
